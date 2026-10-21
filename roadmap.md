@@ -10,3 +10,10 @@
 - [x] Verify uploaded Fullstack certificate and update CV with certificate and expanded master's project supervision.
 - [x] Compare publicly indexed LinkedIn evidence with CV; identify date discrepancies without treating search snippets as live-profile verification.
 - [x] Inspect uploaded GoIT recognition certificate and distinguish employer recognition from a technical course certificate.
+
+# Streaming learning project
+
+- [ ] Build and verify an interactive browser demonstration of a broadcast room with local chat and optional camera preview.
+- [ ] Provide step-by-step exercises covering a separate NestJS API, redux-saga, LiveKit, tests, and GitHub preparation.
+- [ ] Connect genuine multi-user streaming — waits for the later teaching stage and streaming service configuration.
+- [ ] Publish the learning repository on GitHub — waits for user Git connection or upload.
