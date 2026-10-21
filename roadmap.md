@@ -8,3 +8,4 @@
 - [ ] Finalise current employment dates and detailed personal project contributions — waiting for user confirmation.
 - [x] Verify uploaded Fullstack certificate and update CV with certificate and expanded master's project supervision.
 - [x] Compare publicly indexed LinkedIn evidence with CV; identify date discrepancies without treating search snippets as live-profile verification.
+- [x] Inspect uploaded GoIT recognition certificate and distinguish employer recognition from a technical course certificate.
