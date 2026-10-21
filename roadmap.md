@@ -6,3 +6,4 @@
 - [x] Explain Cyprus entity, remote timezone band, and Ukraine overlap.
 - [x] Render and inspect all delivered PDF pages; flag dates and project contribution needing confirmation.
 - [ ] Finalise current employment dates and detailed personal project contributions — waiting for user confirmation.
+- [x] Verify uploaded Fullstack certificate and update CV with certificate and expanded master's project supervision.
