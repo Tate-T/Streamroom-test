@@ -5,7 +5,8 @@
 - [x] Provide targeted interview preparation and application advice.
 - [x] Explain Cyprus entity, remote timezone band, and Ukraine overlap.
 - [x] Render and inspect all delivered PDF pages; flag dates and project contribution needing confirmation.
-- [ ] Finalise current employment dates and detailed personal project contributions — waiting for user confirmation.
+- [x] Finalise current employment dates — user confirmed: Team Lead to May 2026, Mentors’ Operations Coordinator from May 2026, Thesis Supervisor from late May 2025.
+- [ ] Confirm duties for the Mentors’ Operations Coordinator role and detailed personal project contributions — waiting for user confirmation.
 - [x] Verify uploaded Fullstack certificate and update CV with certificate and expanded master's project supervision.
 - [x] Compare publicly indexed LinkedIn evidence with CV; identify date discrepancies without treating search snippets as live-profile verification.
 - [x] Inspect uploaded GoIT recognition certificate and distinguish employer recognition from a technical course certificate.
