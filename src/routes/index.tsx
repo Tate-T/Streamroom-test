@@ -96,6 +96,8 @@ function Index() {
 
   function openLearn() { setView("learn"); setGithub(false); }
 
+  if (!lesson) return null;
+
   return (
     <div className="min-h-screen bg-background">
       <header className="topbar">
