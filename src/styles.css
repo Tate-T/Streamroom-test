@@ -62,25 +62,25 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.5rem;
+  --background: oklch(0.982 0.002 160);
+  --foreground: oklch(0.25 0.014 160);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
+  --primary: oklch(0.48 0.12 164);
   --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.945 0.005 160);
+  --secondary-foreground: oklch(0.3 0.014 160);
+  --muted: oklch(0.96 0.004 160);
+  --muted-foreground: oklch(0.53 0.014 160);
+  --accent: oklch(0.94 0.025 164);
+  --accent-foreground: oklch(0.36 0.07 164);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
+  --border: oklch(0.91 0.005 160);
+  --input: oklch(0.91 0.005 160);
   --ring: oklch(0.704 0.04 256.788);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -140,5 +140,51 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: 0;
   }
 }
+
+@theme inline {
+  --color-stage-foreground: var(--stage-foreground);
+}
+:root {
+  --stage-foreground: oklch(1 0 0);
+  --stage-overlay: oklch(0.2 0.008 160 / 75%);
+  --stage-gradient: linear-gradient(transparent, oklch(0.16 0.008 160 / 82%));
+  --modal-overlay: oklch(0.16 0.008 160 / 45%);
+  --lavender: oklch(0.93 0.027 305);
+  --rose: oklch(0.94 0.029 15);
+}
+.topbar { height: 80px; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); background: var(--card); gap: 16px; }
+.wordmark { font-size: 26px; font-weight: 750; letter-spacing: 0; }
+.nav-active { background: var(--accent); color: var(--accent-foreground); }
+.user-avatar, .host-avatar, .chat-avatar { display: flex; align-items: center; justify-content: center; flex-shrink: 0; border-radius: 50%; font-weight: 600; }
+.user-avatar { width: 34px; height: 34px; background: var(--lavender); font-size: 11px; }
+.demo-badge { display: inline-flex; gap: 7px; align-items: center; font-size: 11px; padding: 7px 10px; background: var(--accent); color: var(--accent-foreground); border-radius: 5px; margin-top: 28px; }
+.room-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px; align-items: start; }
+.video-stage { width: 100%; aspect-ratio: 3 / 2; position: relative; overflow: hidden; border-radius: 8px; background: var(--foreground); color: var(--stage-foreground); }
+.stage-top { position: absolute; top: 18px; left: 18px; right: 18px; display: flex; justify-content: space-between; gap: 8px; }
+.stage-label { display: inline-flex; align-items: center; gap: 6px; border-radius: 4px; background: var(--stage-overlay); padding: 7px 9px; font-size: 10px; }
+.stage-bottom { position: absolute; bottom: 0; right: 0; left: 0; padding: 40px 20px 20px; display: flex; justify-content: space-between; align-items: end; background: var(--stage-gradient); }
+.control-bar { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border); gap: 8px; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--muted-foreground); }
+.host-avatar { width: 40px; height: 40px; background: var(--accent); color: var(--primary); }
+.topic-tag { font-size: 11px; background: var(--secondary); color: var(--muted-foreground); border-radius: 4px; padding: 5px 8px; }
+.chat-panel { display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: 8px; background: var(--card); height: 590px; min-width: 0; }
+.chat-messages { flex: 1; overflow-y: auto; padding: 25px 20px; display: flex; flex-direction: column; gap: 23px; }
+.chat-avatar { width: 29px; height: 29px; font-size: 11px; }
+.avatar-0 { background: var(--lavender); }
+.avatar-1 { background: var(--accent); }
+.avatar-2 { background: var(--rose); }
+.learning-band { margin-top: 36px; padding: 28px 0; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.lesson-icon { color: var(--primary); background: var(--accent); padding: 15px; border-radius: 7px; }
+.lesson-layout { display: grid; grid-template-columns: 265px minmax(0, 1fr); gap: 35px; padding: 20px 0; }
+.lesson-nav { width: 100%; justify-content: start; padding: 13px; height: auto; min-height: 54px; }
+.lesson-number { flex-shrink: 0; width: 25px; font-family: ui-monospace, monospace; font-size: 12px; }
+.code-block { padding: 24px; margin-top: 26px; background: var(--secondary); border-radius: 7px; overflow-x: auto; font-size: 13px; line-height: 1.8; color: var(--foreground); }
+.modal-backdrop { position: fixed; inset: 0; background: var(--modal-overlay); z-index: 50; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.github-dialog { width: 100%; max-width: 480px; padding: 28px; border-radius: 8px; background: var(--card); max-height: 90vh; overflow-y: auto; }
+@media (max-width: 1050px) { .room-layout { grid-template-columns: minmax(0, 1fr) 300px; gap: 20px; } .chat-panel { height: 530px; } }
+@media (max-width: 760px) { .topbar { height: auto; min-height: 74px; flex-wrap: wrap; padding: 16px 20px; } .topbar nav { order: 3; width: 100%; } .wordmark { font-size: 24px; } .room-layout, .lesson-layout { grid-template-columns: 1fr; } .chat-panel { height: 440px; margin-top: 10px; } .demo-badge { margin-top: 0; } .stage-top { top: 10px; right: 10px; left: 10px; } .stage-label { font-size: 9px; padding: 5px 6px; } .learning-band { flex-wrap: wrap; } .lesson-layout { gap: 24px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
