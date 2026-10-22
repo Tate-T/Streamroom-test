@@ -1,29 +1,44 @@
-# Welcome to your Lovable project
+# Streamroom
 
-This project was built with [Lovable](https://lovable.dev).
+**Одна ведуча, нуль глядачів і чесний README.**
 
-## Build with Lovable
+Навчальний полігон: як влаштовані стрімінгові платформи — кімната, чат, камера,
+бекенд і шлях до справжньої трансляції. Тут ніхто не підводиться під вакансію;
+тут розбирають, чому відео взагалі доходить до глядача.
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+## Що всередині
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Відеокімната** — браузерне демо: локальний чат, опційне прев’ю камери
+  на твоєму пристрої, п’ять етапів практикуму.
+- **`learning/nest-api`** — окремий навчальний NestJS API з unit- та HTTP-тестами:
+  `GET /rooms`, `GET /rooms/:id/messages`, `POST /rooms/:id/messages`.
+- **`roadmap.md`** — що вже зроблено й що досі чекає на свій етап.
 
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Запуск
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
 npm i
 npm run dev
 ```
 
-## Built with
+Окремий API — у своїй папці, зі своїми залежностями:
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+```sh
+cd learning/nest-api
+npm ci
+npm test
+npm start
+```
+
+## Чесно про межі
+
+- Це **не** багатокористувацький стрімінг. Камера і чат живуть у твоєму браузері;
+  сусідня вкладка тебе не бачить. Справжній streaming — на наступних етапах.
+- Повідомлення чату зникають після оновлення сторінки.
+- API слухає лише `127.0.0.1:3001`, дані тримає в пам’яті, `demo-host` — фіксована
+  навчальна особа. Це тренувальний майданчик, а не автентифікація й не production.
+- Code written with AI assistance; власний внесок і пояснення рішень — за тобою.
+
+## Стек
+
+TanStack Start · React · TypeScript · Tailwind CSS · NestJS (окремий навчальний проєкт)
