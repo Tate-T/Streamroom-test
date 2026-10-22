@@ -16,6 +16,26 @@
 
 ## Запуск
 
+Проєкт керується через Bun (в репозиторії лежить `bun.lock`). Якщо `npm i`
+завершується помилками, встанови Bun і запускай через нього:
+
+```sh
+curl -fsSL https://bun.sh/install | bash   # встановлення Bun, якщо його ще немає
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+bun install
+bun run dev
+```
+
+Щоб не повторювати `export` у кожному новому терміналі:
+
+```sh
+printf '\nexport BUN_INSTALL="$HOME/.bun"\nexport PATH="$BUN_INSTALL/bin:$PATH"\n' >> ~/.zshrc
+```
+
+Якщо `npm i` в тебе пройшов без помилок — можна і так:
+
 ```sh
 npm i
 npm run dev
