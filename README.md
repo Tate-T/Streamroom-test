@@ -1,31 +1,44 @@
-# Senior Engineer Resume Tailor
+# Streamroom
 
-Потрібно адаптувати резюме під запропоновану вакансію Senior Full-Stack Engineer або Engineering Manager. Трохи деталей про вакансію в ніші Adult:
+**Одна ведуча, нуль глядачів і чесний README.**
 
-Основні вимоги щодо стеку:
-1) type script і на фронт і на бек використовували давно і активно
-2) Ви фулстек з сильним менеджерським досвідом в команді до 10 осіб. Але фулстек з переважанням в бек
-3) розуміння (а краще практичний досвід) роботи з AWS
-4) бажано хороший практичний досвід зі стрімінговими платформами. Коментар від рекрутера "Це буде стрімінгова платформа для знайомства і спілкування 
-Чи готові Ви за технічними скілами менеджерити команду із 8-10 розробників і самій розробляти разом з ними такого виду платформу, високонавантажену, і з потоковим відео?". Додай останню версію мого CV - чи підійду я під ці вакансії? Які вказувати ЗП-очікування? В мене також є досвід керівником відділення у приватбанку, чи варто вказувати про це детальніше?
+Навчальний полігон: як влаштовані стрімінгові платформи — кімната, чат, камера,
+бекенд і шлях до справжньої трансляції. Тут ніхто не підводиться під вакансію;
+тут розбирають, чому відео взагалі доходить до глядача.
 
-This project was built with [Lovable](https://lovable.dev).
+## Що всередині
 
-## Build with Lovable
+- **Відеокімната** — браузерне демо: локальний чат, опційне прев’ю камери
+  на твоєму пристрої, п’ять етапів практикуму.
+- **`learning/nest-api`** — окремий навчальний NestJS API з unit- та HTTP-тестами:
+  `GET /rooms`, `GET /rooms/:id/messages`, `POST /rooms/:id/messages`.
+- **`roadmap.md`** — що вже зроблено й що досі чекає на свій етап.
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/deca9b75-90ff-4ec4-b542-1852228c4aa5).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Запуск
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
 npm i
 npm run dev
 ```
+
+Окремий API — у своїй папці, зі своїми залежностями:
+
+```sh
+cd learning/nest-api
+npm ci
+npm test
+npm start
+```
+
+## Чесно про межі
+
+- Це **не** багатокористувацький стрімінг. Камера і чат живуть у твоєму браузері;
+  сусідня вкладка тебе не бачить. Справжній streaming — на наступних етапах.
+- Повідомлення чату зникають після оновлення сторінки.
+- API слухає лише `127.0.0.1:3001`, дані тримає в пам’яті, `demo-host` — фіксована
+  навчальна особа. Це тренувальний майданчик, а не автентифікація й не production.
+- Code written with AI assistance; власний внесок і пояснення рішень — за тобою.
+
+## Стек
+
+TanStack Start · React · TypeScript · Tailwind CSS · NestJS (окремий навчальний проєкт)
