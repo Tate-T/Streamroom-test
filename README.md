@@ -16,8 +16,9 @@
 
 ## Запуск
 
-Проєкт керується через Bun (в репозиторії лежить `bun.lock`). Якщо `npm i`
-завершується помилками, встанови Bun і запускай через нього:
+Проєкт керується через Bun (в репозиторії лежить `bun.lock`). `npm i` на цьому
+проєкті падає з `Cannot read properties of null (reading 'edgesOut')` — тож
+Bun не «альтернатива», а єдиний робочий шлях:
 
 ```sh
 curl -fsSL https://bun.sh/install | bash   # встановлення Bun, якщо його ще немає
@@ -34,12 +35,7 @@ bun run dev
 printf '\nexport BUN_INSTALL="$HOME/.bun"\nexport PATH="$BUN_INSTALL/bin:$PATH"\n' >> ~/.zshrc
 ```
 
-Якщо `npm i` в тебе пройшов без помилок — можна і так:
-
-```sh
-npm i
-npm run dev
-```
+`npm i` тут не працює (див. вище), тому всі команди — через `bun`.
 
 Окремий API — у своїй папці, зі своїми залежностями:
 
