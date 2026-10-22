@@ -11,3 +11,4 @@
 
 - Keep the streaming preview browser-only and explicitly distinguish local camera/chat from multi-user streaming; this avoids presenting a simulation as a connected service.
 - Keep educational examples separate from operational code; NestJS and LiveKit examples describe a later standalone project, while this app retains TanStack Start.
+- Keep the runnable NestJS exercise in learning/nest-api with its own dependencies and Node tests; never import it into the preview runtime. Its fixed demo identity and memory storage are local teaching fixtures, not authentication or persistence.
