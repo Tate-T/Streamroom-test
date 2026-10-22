@@ -46,6 +46,30 @@ npm test
 npm start
 ```
 
+## Деплой на Vercel
+
+Код живе в приватному репозиторії GitHub, Vercel бере його звідти і перевипускає
+проєкт при кожному `git push`.
+
+1. **Підключити GitHub** — у Lovable: Project settings → Git → Connect GitHub.
+   З’явиться новий приватний репозиторій (ім’я `streamroom`).
+2. **Імпортувати в Vercel** — vercel.com → Add New → Project → обрати цей
+   репозиторій → Import.
+3. **Налаштування збірки** (Vercel зазвичай визначає їх сам):
+
+   | Поле | Значення |
+   | --- | --- |
+   | Project Name | `streamroom` |
+   | Framework Preset | Vercel визначає автоматично |
+   | Install Command | `bun install` |
+   | Build Command | `bun run build` |
+   | Output Directory | лишити порожнім |
+   | Environment Variables | жодних не потрібно |
+
+4. **Deploy.** Збірка робить статичні файли плюс одну серверну функцію на Node 22;
+   локально це перевірено (`bun install` і `bun run build` у чистій копії
+   репозиторія).
+
 ## Що це і чим не є
 
 - Це **не** багатокористувацький стрімінг. Камера і чат живуть у твоєму браузері;
